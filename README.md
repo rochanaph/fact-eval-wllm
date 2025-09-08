@@ -55,3 +55,9 @@ For more details read README file at `evaluation_scripts/`
 - **`HQA`**: HealthQA dataset for **text completion/generation tasks** (230-word medical passages)
 - **`HQA2`**: HealthQA dataset for **question-answering tasks** (medical Q&A pairs) 
 - **`MEQS`**: MeQSum dataset for **summarization tasks** (medical question summarization)
+
+---
+
+## Original MarkLLM Documentation
+
+For complete documentation about the MarkLLM toolkit, including detailed usage examples, API references, and comprehensive guides on watermarking algorithms, please refer to the [original MarkLLM README](MarkLLM-README.md).
