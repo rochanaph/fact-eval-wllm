@@ -6,7 +6,9 @@
 
 This repository contains the experimental framework and evaluation tools for our EMNLP 2025 paper on watermarking methods for medical texts. We extend the MarkLLM toolkit with medical domain-specific evaluation capabilities and introduce the Factuality-Weighted Score (FWS) for assessing watermark quality in safety-critical applications.
 
-![Benchmark Pipeline](images/benchmark-pipeline-2.png)
+<p align="center">
+<img src="images/benchmark-pipeline-2.png" alt="Benchmark Pipeline" width="75%">
+</p>
 <p align="center"><em><small><strong>Figure 1:</strong> Factuality degradation in watermarked medical text illustrated through the proposed evaluation framework. <strong>(1) Evaluation workflow</strong> covers coherence, relevance, and factual accuracy, applicable to GPT-Judger and traditional metrics. <strong>(2) Factuality-weighted Score (FWS)</strong> emphasizes critical factual accuracy beyond coherence and serving as a unified metric to guide watermarking deployment in medical applications.</small></em></p>
 
 ## 🆕 New Components (Built on MarkLLM)
