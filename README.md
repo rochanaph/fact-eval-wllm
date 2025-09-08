@@ -6,6 +6,9 @@
 
 This repository contains the experimental framework and evaluation tools for our EMNLP 2025 paper on watermarking methods for medical texts. We extend the MarkLLM toolkit with medical domain-specific evaluation capabilities and introduce the Factuality-Weighted Score (FWS) for assessing watermark quality in safety-critical applications.
 
+![Benchmark Pipeline](images/benchmark-pipeline-2.png)
+<p align="center"><em><small><strong>Figure 1:</strong> Factuality degradation in watermarked medical text illustrated through the proposed evaluation framework. <strong>(1) Evaluation workflow</strong> covers coherence, relevance, and factual accuracy, applicable to GPT-Judger and traditional metrics. <strong>(2) Factuality-weighted Score (FWS)</strong> emphasizes critical factual accuracy beyond coherence and serving as a unified metric to guide watermarking deployment in medical applications.</small></em></p>
+
 ## 🆕 New Components (Built on MarkLLM)
 
 ### `evaluation_scripts/` - Standalone Evaluation Tools
@@ -55,6 +58,30 @@ For more details read README file at `evaluation_scripts/`
 - **`HQA`**: HealthQA dataset for **text completion/generation tasks** (230-word medical passages)
 - **`HQA2`**: HealthQA dataset for **question-answering tasks** (medical Q&A pairs) 
 - **`MEQS`**: MeQSum dataset for **summarization tasks** (medical question summarization)
+
+## Key Results
+
+Our evaluation reveals how watermarking methods affect medical text quality across different models. The table below shows the GPT-Judger quality drop percentages for various watermarking methods on medical question-answering tasks:
+
+| **Watermarking Methods** | **Coherence** | **Relevance** | **Factual Accuracy**|
+|--------------------------|----------------|------------------|------------------------|
+| | **Meditron v1.0 7B** | |
+| KGW | 6.9 | **4.8** | **4.8** |
+| SWEET | **6.2** | 13.7 | 7.5 |
+| DiPmark | 9.6 | 7.4 | 8.1 |
+| EXP-edit | 20.9 | 17.2 | 16.3 |
+| | **BioMistral 7B** | | |
+| KGW | 12.4 | 12.8 | 12.1 |
+| SWEET | 8.5 | 9.2 | 6.6 |
+| DiPmark | **3.3** | **5.9** | **6.0** |
+| EXP-edit | 17.9 | 24.1 | 15.9 |
+| | **MedLlama-3 8B** | | |
+| KGW | 7.5 | 9.7 | **3.7** |
+| SWEET | 9.5 | 15.0 | 11.9 |
+| DiPmark | **6.9** | **5.3** | 5.3 |
+| EXP-edit | 7.5 | 5.8 | 6.3 |
+
+<p align="center"><em><small><strong>Table 1:</strong> Performance comparison of watermarking methods across medical language models of different sizes for QA tasks. Bold values indicate best performance (lowest quality drop) for each model.</small></em></p>
 
 ---
 
